@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Behind Every Click | HTTP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page heading -->
+    <header>
+        <h1>Behind Every Click</h1>
+        <p>One click starts an exchange. A whole page takes many.</p>
+    </header>
+    <!-- Main navigation menu -->
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="behind-the-click.html">Behind Every Click</a>
+        <a href="evoluation.html">HTTP Evoluation </a>
+        <a href="concepts.html">Key Concepts</a>
+        <a href="references.html">References</a>
+        <a href="about.html">About</a>
+    </nav>
+    <!-- How a browser requests a web page -->
+    <main>
+        <section>
+            <h2>A page comes in pieces</h2>
+            <p>
+               Normally when you click on a link it doesn't download a complete website all at once. Your browser then asks for the HTML content. As it reads the document, it may request pictures, CSS files and Javascript independently. 
+            </p>
+            <ol>
+                <li>Your browser sends a requestt for a resource.</li>
+                <li>The server processes the request.</li>
+                <li>The server sends back an HTTP response.</li>
+                <li>Your browser uses the response to build the page.</li>
+            </ol>
+            <p>
+                This accounts for the fact that a page can display its text before its pictures come up. Different resources may load in different time.
+            </p>
+        </section>
+        <!-- Parts of an HTTP exchange -->
+        <section>
+            <h2>What does the conversation consist of?</h2>
+            <p>
+                A request describes what the client wants. A response reports the results and may include the requested content.
+            </p>
+            <ul>
+                <li>Method: the action requested, such as GET.</li>
+                <li>Target: the resource being requested.</li>
+                <li>Headers: extra information about the message.</li>
+                <li>Status code: the result reported by the server.</li>
+                <li>Body: content carried by a message, when present.</li>
+            </ul>
+            <p>
+                For instance, a browser can send a GET request for an image. A successful response can provide status code 200 and the image data in the body.
+            </p>
+        </section>
+        <!-- Cookies connect separate requests -->
+        <section>
+            <h2>If HTTP forgets, why does your cart remember?</h2>
+            <p>
+                HTTP is stateless. It does not automatically recall past requests. A shopping website provides its own technique to link your visits.
+            </p>
+            <p>
+                Your server can deliver a cookie to be stored by your browser. Then your browser can send the cookie back with later requests. The cookie may iinclude an identification that ties you to shopping cart data on the server.
+            </p>
+            <p>
+                HTTP provides the rules for how messages are exchanged. The application keeps the cart in mind.
+            </p>
+        </section>
+        <!-- Caching can reduce repeated downloads -->
+        <section>
+            <h2>The fastest download may be the one you skip</h2>
+            <p>
+                The browser cache has copies of resources. If caching rules permit it, the browser can use a saved copy rather than dowloading it again.
+            </p>
+            <p>
+                Sometimes the browser will ask if a resource has changed. If it has not changed, the server can reply with 304 Not Modified. The browser then utilizes its copy again.
+            </p>
+            <p>
+               Cookies allow you to correlate requests with application state. Caching helps to reuse content. They serve various objectives in the same browsing experience.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
