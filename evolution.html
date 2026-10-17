@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Evolution | HTTP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page heading -->
+    <header>
+        <h1>HTTP Evolution</h1>
+        <p>The conversation stayed. The delivery changed.</p>
+    </header>
+    <!-- Main navigation menu -->
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="evolution.html">HTTP Evolution</a>
+        <a href="concepts.html">Key Concepts</a>
+        <a href="references.html">References</a>
+        <a href="about.html">About</a>
+    </nav>
+    <!-- Why HTTP changed -->
+    <main>
+        <section>
+            <h2>Same job, more traffic</h2>
+            <p>
+                HTTP is used by both a simple page and a busy online business. As sites add more images, scripts and other resources browsers had more to ask for. HTTP developed to be able to handle those transfers more effectively.
+            </p>
+        </section>
+        <!-- Compare HTTP versions -->
+        <section>
+            <h2>What changed with each version?</h2>
+            <table>
+                <caption>How HTTP handles a growing web</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Version</th>
+                        <th scope="col">Main change</th>
+                        <th scope="col">Why it matters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">HTTP/1.0</th>
+                        <td>Usually opened a new connection for each request.</td>
+                        <td>Loading many resources meant opening many connections.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">HTTP/1.1</th>
+                        <td>Reuses connections by default.</td>
+                        <td>Several requests can use the same connection.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">HTTP/2</th>
+                        <td>Multiplexes requests and responses over one connection.</td>
+                        <td>Multiple exchanges can progress at the same time.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">HTTP/3</th>
+                        <td>Uses QUIC to carry HTTP exchanges.</td>
+                        <td>A lost packet on one stream does not block other streams.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- What the versions share -->
+        <section>
+            <h2>A faster exchange still needs clear meaning</h2>
+            <p>
+                HTTP versions modify how messages travel, but methods, status codes and headers still describe what those messages imply. A GET request still requests a resource, and a 404 answer still says it was not found.
+            </p>
+        </section>
+        <!-- Sources for this page -->
+        <section>
+            <h2>Explore the sources</h2>
+            <p>
+                Visit the 
+                <a href="references.html">references and resources</a>
+                to learn more about HTTP versions and standards.
+            </p>
+        </section>
+    </main>
+    <!-- Required class project information-->
+    <footer>
+        <p>This website is a class project for IT 3203 at Kennesaw State University.</p>
+        <p>
+            <a href="https://ksuweb.github.io/IT3203/">Visit the class website</a>
+        </p>
+    </footer>
+</body>
+</html>
