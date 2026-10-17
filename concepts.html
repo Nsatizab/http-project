@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key concepts | HTTP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page heading -->
+    <header>
+        <h1>Key Concepts</h1>
+        <p>Seven terms behind an everyday click.</p>
+    </header>
+
+    <!-- Main navigation menu -->
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="behind-the-click.html">Behind Every Click</a>
+        <a href="evolution.html">HTTP Evolution</a>
+        <a href="concepts.html">Key Concepts</a>
+        <a rhef="references.html">References</a>
+        <a href="about.html">About</a>
+    </nav>
+    <!-- HTTP terms and everyday examples -->
+    <main>
+        <section>
+            <h2>1. Request: asking for something</h2>
+            <p>
+                A request is a message a client sends to a server. It identifies a resource and the action the client wants to perform.
+            </p>
+            <p>
+                For instance, your browser sends a request when it asks a server for an image.
+            </p>
+        </section>
+        <section>
+            <h2>2. Response:answering the request</h2>
+            <p>
+                A response is the message a server returns to the client. It has a status code, headers and sometimes a body with the item you requested.
+            </p>
+            <p>
+                For instance, the server can return an image or report that the image was not found.
+            </p>
+        </section>
+        <section>
+            <h2>3. Method: choosing the action</h2>
+            <p>
+                A method tells the server what action the client wants to perform on a resource.
+            </p>
+            <p>
+                GET requests a resource. POST asks the server to process submitted content, such as form information.
+            </p>
+        </section>
+        <section>
+            <h2>4. Status code: reporting the result</h2>
+            <p>
+                A status code is a three-digit number in a response. It tells the client what happened to its request.
+            </p>
+            <ul>
+                <li>200 OK: the request succeeded.</li>
+                <li>404 Not Found: the resource was not found.</li>
+                <li>500 Internal Server Error: the server encountered a problem</li>
+            </ul>
+        </section>
+        <section>
+            <h2>5. Header: adding useful details</h2>
+            <p>
+                Headers carry extra information in requests and responses. They help explain how to handle a message.
+            </p>
+            <p>
+                For instance, Content-Type identifies the type of content being sent, such as HTML or an image. Cache-control provides rules for caching.
+            </p>
+        </section>
+        <section>
+            <h2>6. Cookie: connecting separate visits</h2>
+            <p>
+                A cookie is a small piece of data stored by the browser. The browser can send it back to the server with later requests.
+            </p>
+            <p>
+                For instance, a cookie can hold a session indentifier that helps a shopping website recognize your carts. HTTP itself remains stateless.
+            </p>
+        </section>
+        <section>
+            <h2>7. Cache: reusing a saved copy</h2>
+            <p>
+                A cache stores copies of resources for possible reuse. When caching rules allow it, a browser can reuse a saved resource instead of downloading it again.
+            </p>
+            <p>
+                For instance, a saved website logo can reduce repeated downloads as you browse different pages.
+            </p>
+        </section>
+        <!-- Sources for these definitions -->
+        <section>
+            <h2>Explore the sources</h2>
+            <p>
+                Find more explanations on the
+                <a href="references.html">references and resources</a>
+                page.
+            </p>
+        </section>
+    </main>
+
+    <!-- Required class project information -->
+    <footer>
+        <p>This website is a class project for IT 3203 at Kennesaw State University.</p>
+        <p>
+            <a href="https://ksuweb.github.io/IT3203/">Visit the class website</a>
+        </p>
+    </footer>
+</body>
+</html>
