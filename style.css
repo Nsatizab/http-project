@@ -114,3 +114,19 @@ main a:hover {
     color: #173f3f;
     text-decoration: none;
 }
+
+/* Diagram size and caption */
+figure {
+    margin: 24px 0;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+}
