@@ -3,7 +3,7 @@ const quizForm = document.getElementById("quiz-form");
 const quizFields = document.getElementById("quiz-fields");
 const startButton = document.getElementById("start-quiz");
 const submitButton = document.getElementById("submit-quiz");
-const restButton = document.getElementById("reset-quiz");
+const resetButton = document.getElementById("reset-quiz");
 const timerDisplay = document.getElementById("timer");
 const resultsSection = document.getElementById("quiz-results")
 const summaryDisplay = document.getElementById("quiz-summary");
@@ -54,7 +54,7 @@ const answerKey = [
     { name: "q1", type: "text", correct: ["hypertext transfer protocol"],
       answer: "Hypertext Transfer Protocol" },
     { name: "q2", type: "text", correct: ["404"],
-      answer: "404 },
+      answer: "404" },
     { name: "q3", type: "radio", correct: ["get"],
       answer: "GET" },
     { name: "q4", type: "radio", correct: ["cookie"],
@@ -79,7 +79,7 @@ function getUserAnswers(question) {
         return [input.value.trim().toLowerCase().replace(/\s+/g, " ")];
     }
     const selected = quizForm.querySelectorALL(
-        'input[name=" ' + question.name + ' "]:checked'
+        'input[name="' + question.name + '"]:checked'
     );
     return Array.from(selected, input => input.value);
 }
