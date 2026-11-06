@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTTP Quiz | HTTP</title>
     <link rel="stylesheet" href="style.css">
     <script src="quiz.js" defer></script>
@@ -20,7 +20,7 @@
         <a href="behind-the-click.html">Behind Every Click</a>
         <a href="evolution.html">HTTP Evolution</a>
         <a href="concepts.html">Key Concepts</a>
-        <a href="quiz.html"> aria-current="page">HTTP Quiz</a>
+        <a href="quiz.html" aria-current="page">HTTP Quiz</a>
         <a href="references.html">References</a>
         <a href="about.html">About</a>
     </nav>
@@ -29,7 +29,7 @@
         <section aria-labelledby="quiz-instructions">
             <h2 id="quiz-instructions">Before you begin</h2>
             <p>You have 10 minutes to answer 10 HTTP questions.</p>
-            <p>Each questions is worth 1 point. Score 7 out of 10 to pass.</p>
+            <p>Each question is worth 1 point. Score 7 out of 10 to pass.</p>
             <p>For checkbox questions, select every correct answer.</p>
             <p>The timer begins when you click Start Quiz.</p>
             <p>When time runs out, your current answers will be graded.</p>
@@ -38,11 +38,11 @@
         </section>
         <!-- Questions stay disabled until the quiz starts -->
         <form id="quiz-form">
-            <fieldset id+quiz-field" disabled>
+            <fieldset id="quiz-fields" disabled>
                 <legend>HTTP knowledge check</legend>
 
                 <!-- Question 1: fill in the blank -->
-                <div class="quiz-questions">
+                <div class="quiz-question">
                     <label for="q1">1. What does HTTP stand for?</label>
                     <input type="text" id="q1" name="q1"
                             autocomplete="off">
@@ -54,16 +54,16 @@
                             autocomplete="off">
                 </div>
                 <!-- Question 3: single answer -->
-                <fieldset class="quiz-questions">
+                <fieldset class="quiz-question">
                     <legend>3. Which method requests a resource?</legend>
                     <label>
-                        <input type="radio" name="q3" value"get"> GET
+                        <input type="radio" name="q3" value="get"> GET
                     </label>
                     <label>
                         <input type="radio" name="q3" value="post"> POST
                     </label>
                     <label>
-                        <input type="radio" name"q3" value="delete"> DELETE
+                        <input type="radio" name="q3" value="delete"> DELETE
                     </label>
                 </fieldset>
                 <!-- Question 4: single answer -->
@@ -73,7 +73,7 @@
                         <input type="radio" name="q4" value="cache"> A cached logo
                     </label>
                     <label>
-                        <input type="radio" name"q4" value="cookie"> A session cookie
+                        <input type="radio" name="q4" value="cookie"> A session cookie
                     </label>
                     <label>
                         <input type="radio" name="q4" value="status"> A 404 status code
@@ -112,7 +112,7 @@
                 <fieldset class="quiz-question">
                     <legend>7. Which HTTP version introduced multiplexing over one TCP connection?</legend>
                     <label>
-                        <input type="radio"name="q7" value="http1"> HTTP/1.0
+                        <input type="radio" name="q7" value="http1"> HTTP/1.0
                     </label>
                     <label>
                         <input type="radio" name="q7" value="http2"> HTTP/2
@@ -185,3 +185,4 @@
         </p>
     </footer>
 </body>
+</html>
