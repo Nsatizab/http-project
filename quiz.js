@@ -1,14 +1,14 @@
 // Connect JavaScript to the quiz controls.
 const quizForm = document.getElementById("quiz-form");
-const quizField = document.getElementaryId("quiz-fields");
-const startButton = document.getElementaryId("start-quiz");
-const submitButton = document.getElementaryId("submit-quiz");
-const restButton = document.getElementaryId("reset-quiz");
-const timerDisplay = document.getElementaryId("timer");
-const resultsSection = document.getElementaryId("quiz-results")
-const summaryDisplay = document.getElementaryId("quiz-summary");
-const timeDisplay = document.getElementaryId("time-spent");
-const answerResults = document.getElementaryId("answer-results");
+const quizFields = document.getElementById("quiz-fields");
+const startButton = document.getElementById("start-quiz");
+const submitButton = document.getElementById("submit-quiz");
+const restButton = document.getElementById("reset-quiz");
+const timerDisplay = document.getElementById("timer");
+const resultsSection = document.getElementById("quiz-results")
+const summaryDisplay = document.getElementById("quiz-summary");
+const timeDisplay = document.getElementById("time-spent");
+const answerResults = document.getElementById("answer-results");
 
 // Track the ten-minute limit and the current attempt.
 const timeLimit = 600;
