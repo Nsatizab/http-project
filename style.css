@@ -153,3 +153,79 @@ caption {
     font-weight: bold;
     margin-bottom: 12px;
 }
+/* Quiz questions and form controls */
+.quiz-question {
+    margin-bottom: 24px;
+    padding: 20px;
+    border: 1px solid #c5d5cb;
+    background-color: #ffffff;
+}
+
+.quiz-question legend {
+    font-weight: bold;
+}
+
+.quiz-question label {
+    display: block;
+    margin: 10px 0 ;
+}
+
+.quiz-question input[type="text"] {
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid #647870;
+}
+
+.quiz.question input[type="radio"],
+.quiz.question input[type="checkbox"] {
+    margin-right: 8px;
+}
+#start-quiz,
+#submit-quiz,
+#reset-quiz {
+    padding: 12px 18px;
+    margin: 8px 8px 16px 0;
+    background-color: #173f3f;
+    color: #ffffff;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+#start-quiz:hover,
+#submit-quiz:hover,
+#reset-quiz:hover {
+    background-color: #245c50;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+
+}
+
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Quiz scores and feedback */
+.correct {
+    color: #176334;
+}
+
+.incorrect {
+    color: #a12622;
+}
+
+#quiz-summary {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#answer-results li {
+    margin-bottom: 12px;
+}
