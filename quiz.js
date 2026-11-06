@@ -78,7 +78,7 @@ function getUserAnswers(question) {
         const input = document.getElementById(question.name);
         return [input.value.trim().toLowerCase().replace(/\s+/g, " ")];
     }
-    const selected = quizForm.querySelectorALL(
+    const selected = quizForm.querySelectorAll(
         'input[name="' + question.name + '"]:checked'
     );
     return Array.from(selected, input => input.value);
