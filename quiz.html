@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>HTTP Quiz | HTTP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+<!-- Quiz page heading -->
+<header>
+    <h1>Behind the Click Challenge</h1>
+    <p>Ten questions about the conversations behind the web.</p>
+</header>
+
+    <!-- Main navigation menu -->
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="behind-the-click.html">Behind Every Click</a>
+        <a href="evolution.html">HTTP Evolution</a>
+        <a href="concepts.html">Key Concepts</a>
+        <a href="quiz.html"> aria-current="page">HTTP Quiz</a>
+        <a href="references.html">References</a>
+        <a href="about.html">About</a>
+    </nav>
+    <main>
+        <!-- Quiz instructions and timer -->
+        <section aria-labelledby="quiz-instructions">
+            <h2 id="quiz-instructions">Before you begin</h2>
+            <p>You have 10 minutes to answer 10 HTTP questions.</p>
+            <p>Each questions is worth 1 point. Score 7 out of 10 to pass.</p>
+            <p>For checkbox questions, select every correct answer.</p>
+            <p>The timer begins when you click Start Quiz.</p>
+            <p>When time runs out, your current answers will be graded.</p>
+            <button type="button" id="start-quiz">Start Quiz</button>
+            <p id="timer" role="timer">Time remaining: 10:00</p>
+        </section>
+        <!-- Questions stay disabled until the quiz starts -->
+        <form id="quiz-form">
+            <fieldset id+quiz-field" disabled>
+                <legend>HTTP knowledge check</legend>
+
+                <!-- Question 1: fill in the blank -->
+                <div class="quiz-questions">
+                    <label for="q1">1. What does HTTP stand for?</label>
+                    <input type="text" id="q1" name="q1"
+                            autocomplete="off">
+                </div>
+                <!-- Question 2: fill in the blank-->
+                <div class="quiz-question">
+                    <label for="q2">2. Which HTTP status code means Not Found?</label>
+                    <input type="text" id="q2" name="q2"
+                            autocomplete="off">
+                </div>
+                <!-- Question 3: single answer -->
+                <fieldset class="quiz-questions">
+                    <legend>3. Which method requests a resource?</legend>
+                    <label>
+                        <input type="radio" name="q3" value"get"> GET
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="post"> POST
+                    </label>
+                    <label>
+                        <input type="radio" name"q3" value="delete"> DELETE
+                    </label>
+                </fieldset>
+                <!-- Question 4: single answer -->
+                <fieldset class="quiz-question">
+                    <legend>4. What helps a shopping website recognize your carts across requests?</legend>
+                    <label>
+                        <input type="radio" name="q4" value="cache"> A cached logo
+                    </label>
+                    <label>
+                        <input type="radio" name"q4" value="cookie"> A session cookie
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="status"> A 404 status code
+                    </label>
+                </fieldset>
+                <!-- Question 5: single answer -->
+                <fieldset class="quiz-question">
+                    <legend>5. What does a browser cache do?</legend>
+                    <label>
+                        <input type="radio" name="q5" value="password"> Creates passwords
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="request"> Blocks every request
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="reuse"> Saves resources for reuse
+                    </label>
+                </fieldset>
+                <!-- Question 6: multiple selections -->
+                <fieldset class="quiz-question">
+                    <legend>6. Which can be parts of an HTTP response? Select all that apply.</legend>
+                    <label>
+                        <input type="checkbox" name="q6" value="status"> Status code
+                    </label>
+                    <label>
+                        <input type="checkbox" name="q6" value="headers"> Headers
+                    </label>
+                    <label>
+                        <input type="checkbox" name="q6" value="body"> Body
+                    </label>
+                    <label>
+                        <input type="checkbox" name="q6" value="history"> Your complete browsing history
+                    </label>
+                </fieldset>
+                <!-- Question 7: single answer -->
+                <fieldset class="quiz-question">
+                    <legend>7. Which HTTP version introduced multiplexing over one TCP connection?</legend>
+                    <label>
+                        <input type="radio"name="q7" value="http1"> HTTP/1.0
+                    </label>
+                    <label>
+                        <input type="radio" name="q7" value="http2"> HTTP/2
+                    </label>
+                    <label>
+                        <input type="radio" name="q7" value="http3"> HTTP/3
+                    </label>
+                </fieldset>
+                <!-- Question 8: single answer -->
+                <fieldset class="quiz-question">
+                    <legend>8. Which transport protocol does HTTP/3 use?</legend>
+                    <label>
+                        <input type="radio" name="q8" value="tcp"> TCP
+                    </label>
+                    <label>
+                        <input type="radio" name="q8" value="ftp"> FTP
+                    </label>
+                    <label>
+                        <input type="radio" name="q8" value="quic"> QUIC
+                    </label>
+                </fieldset>
+                <!-- Question 9: single answer -->
+                <fieldset class="quiz-question">
+                    <legend>9. What does it mean that HTTP is stateless?</legend>
+                    <label>
+                        <input type="radio" name="q9" value="memory"> HTTP automatically remembers every visit
+                    </label>
+                    <label>
+                        <input type="radio" name="q9" value="independent"> HTTP does not automatically remember previous requests
+                    </label>
+                    <label>
+                        <input type="radio" name="q9" value="cookies"> Websites cannot use cookies
+                    </label>
+                </fieldset>
+                <!-- Question 10: single answer -->
+                <fieldset class="quiz-question">
+                    <legend>10. Which header identifies the type of content being sent</legend>
+                    <label>
+                        <input type="radio" name="q10" value="cache-control"> Cache-Control
+                    </label>
+                    <label>
+                        <input type="radio" name="q10" value="content-type"> Content-Type
+                    </label>
+                    <label>
+                        <input type="radio" name="q10" value="cookie"> Cookie
+                    </label>
+                </fieldset>
+                <!-- Grade the answers when clicked -->
+                <button type="button" id="submit-quiz">Check My Answers</button>
+            </fieldset>
+
+            <!-- Clear answers, results, and the timer -->
+            <button type="button" id="reset-quiz">Retake / Reset Quiz</button>
+        </form>
+        <!-- Javascript displays the scores and answers here -->
+        <section id="quiz-results" aria-labelledby="results-heading"
+                 tabindex="-1" hidden>
+            <h2 id="results-heading">Your quiz results</h2>
+            <p id="quiz-summary"></p>
+            <p id="time-spent"></p>
+            <ol id="answer-results"></ol>
+        </section>
+    </main>
+
+    <!-- Required class project information -->
+    <footer>
+        <p>This website is a class project for IT 3203 at Kennesaw State University</p>
+        <p>
+            <a href="https://ksuweb.github.io/IT3203/">Visit the class website</a>
+        </p>
+    </footer>
+</body>
