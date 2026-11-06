@@ -32,7 +32,7 @@ function updateTimer() {
     const remaining = timeLimit - getElapsedSeconds();
     timerDisplay.textContent = "Time remaining: " + formatTime(remaining);
     if (remaining === 0) {
-        finishedQuiz();
+        finishQuiz();
     }
 }
 
@@ -43,25 +43,25 @@ function startQuiz() {
     }
     startTime = Date.now();
     quizFinished = false;
-    quizfields.disabled = false;
+    quizFields.disabled = false;
     startButton.disabled = true;
     updateTimer();
     timerId = setInterval(updateTimer, 1000);
     document.getElementById("q1").focus();
 }
 // Store the correct values and readable answers.
-const answerKey = {
+const answerKey = [
     { name: "q1", type: "text", correct: ["hypertext transfer protocol"],
-      answer: "Hypertext Transfer Protocol"},
+      answer: "Hypertext Transfer Protocol" },
     { name: "q2", type: "text", correct: ["404"],
-      answer: "404},
-    { name: "q3", type: "radio", correct: ["get"]
+      answer: "404 },
+    { name: "q3", type: "radio", correct: ["get"],
       answer: "GET" },
-    { name: "q4", type: "radio", correct: ["cookie"]
-      answer: "A session cookie"},
+    { name: "q4", type: "radio", correct: ["cookie"],
+      answer: "A session cookie" },
     { name: "q5", type: "radio", correct: ["reuse"],
       answer: "Saves resources for reuse" },
-    { name: "q6", type: "checkbox", correct: ["status"],
+    { name: "q6", type: "checkbox", correct: ["status", "headers", "body"],
       answer: "Status code, headers, and body" },
     { name: "q7", type: "radio", correct: ["http2"],
       answer: "HTTP/2" },
@@ -70,10 +70,10 @@ const answerKey = {
     { name: "q9", type: "radio", correct: ["independent"],
       answer: "HTTP does not automatically remember previous requests" },
     { name: "q10", type: "radio", correct: ["content-type"],
-     answer: "Content-Type" },
+      answer: "Content-Type" }
 ];
 // Read typed answers or selected choices.
-function getUserAnswer(question) {
+function getUserAnswers(question) {
     if (question.type === "text") {
         const input = document.getElementById(question.name);
         return [input.value.trim().toLowerCase().replace(/\s+/g, " ")];
@@ -85,8 +85,8 @@ function getUserAnswer(question) {
 }
 
 // Award a point only when every required answer matches.
-function isCorrect(question. userAnswers) {
-    return userAnswers.length === questions.correct.length &&
+function isCorrect(question, userAnswers) {
+    return userAnswers.length === question.correct.length &&
         question.correct.every(answer => userAnswers.includes(answer));
 }
 // Grade the attempt and show feedback for every question.
@@ -96,13 +96,13 @@ function finishQuiz() {
     }
     quizFinished = true;
     clearInterval(timerId);
-    count elapsed = getElapsedSeconds();
+    const elapsed = getElapsedSeconds();
     let score = 0;
     answerResults.replaceChildren();
 
     answerKey.forEach(question => {
-        count answers = getUserAnswers(question);
-        count correct = isCorrect(question, answers);
+        const answers = getUserAnswers(question);
+        const correct = isCorrect(question, answers);
         if (correct) {
             score++;
 
@@ -135,14 +135,14 @@ function resetQuiz() {
     resultsSection.hidden = true;
     summaryDisplay.textContent = "";
     summaryDisplay.className = "";
-    timeDisplay.className = "";
+    timeDisplay.textContent = "";
     answerResults.replaceChildren();
     timerDisplay.textContent = "Time remaining: 10:00";
     startButton.focus();
 }
 
 // Connect each button to its function
-startButtom.addEventListener("click", startQuiz);
+startButton.addEventListener("click", startQuiz);
 submitButton.addEventListener("click", finishQuiz);
 resetButton.addEventListener("click", resetQuiz);
 
