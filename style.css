@@ -317,7 +317,7 @@ main {
 
 /*Let wide tables scroll within the page */
 .table-scroll {
-    max-width: 100%
+    max-width: 100%;
     overflow-x: auto;
 }
 
